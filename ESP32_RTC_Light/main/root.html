@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>ESP32 RTC Light</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+
+    <h1>ESP32 RTC Light</h1>
+
+    <h2>Time Settings:</h2>
+    <p>Be aware, that the clock always uses summer time!</p>
+    <h3>ON Time:</h3>
+    <input type="time" id="timeOn" name="timeOn">
+    <h3>OFF Time:</h3>
+    <input type="time" id="timeOff" name="timeOff">
+    <br><br>
+
+    <h2>Time Server Settings:</h2>
+    <div id="time"></div>
+    <label for="timeServer">Time Server:</label>
+    <input type="text" id="timeServer" name="timeServer" size="20">
+    <br><br>
+
+    <h2>WIFI Settings:</h2>
+    <!--<h3>Scanned APs:</h3>
+    <div id="divScannedAps"></div>-->
+
+    <h3>AP Settings:</h3>
+    <label for="name">WIFI SSID:</label>
+    <input type="text" id="ssid" name="ssid" size="20">
+    <br><br>
+    <label for="passwdChanged">WIFI Passwd Changed?:</label>
+    <input type="checkbox" id="passwdChanged" name="passwdChanged">
+    <br><br>
+    <label for="passwd">WIFI Passwd:</label>
+    <input type="text" id="passwd" name="passwd" size="20">
+    <br><br>
+
+    <h2>OTA</h2>
+    <h3>HTTP Server for OTA:</h3>
+    <label for="otaServer">OTA Server:</label>
+    <input type="text" id="otaServer" name="otaServer" size="20">
+    <br>
+    <h3>Update:</h3>
+    <button onclick="ota()">OTA Firmware Update</button>
+    <br><br>
+
+    <br><br>
+    <button onclick="save()">Save all changes and reset!</button>
+    <br><br><br>
+    <button onclick="stb()">Go into sleep mode without resetting or saving!</button>
+    
+</body>
+
+</html>
